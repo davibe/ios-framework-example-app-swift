@@ -7,9 +7,11 @@
 //
 
 import XCTest
+
 @testable import MyFrameworkUsageExampleSwift
 
 class MyFrameworkUsageExampleSwiftTests: XCTestCase {
+    public var vc:ViewController = ViewController()
     
     override func setUp() {
         super.setUp()
@@ -22,8 +24,10 @@ class MyFrameworkUsageExampleSwiftTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let framework = self.vc.framework
+        let result = framework.doSomething()
+        XCTAssert(result)
+        XCTAssert(framework.optionalString != nil)
     }
     
     func testPerformanceExample() {

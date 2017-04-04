@@ -13,6 +13,9 @@
 		0D7130F11E9248B700133C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D7130F01E9248B700133C94 /* Assets.xcassets */; };
 		0D7130F41E9248B700133C94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D7130F21E9248B700133C94 /* LaunchScreen.storyboard */; };
 		0D7130FF1E9248B700133C94 /* MyFrameworkUsageExampleSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7130FE1E9248B700133C94 /* MyFrameworkUsageExampleSwiftTests.swift */; };
+		0D71310C1E9249F900133C94 /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D71310B1E9249F900133C94 /* MyFramework.framework */; };
+		0D71310D1E924C6800133C94 /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D71310B1E9249F900133C94 /* MyFramework.framework */; };
+		0D71310E1E924C6800133C94 /* MyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D71310B1E9249F900133C94 /* MyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +28,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0D71310F1E924C6800133C94 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0D71310E1E924C6800133C94 /* MyFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0D7130E61E9248B700133C94 /* MyFrameworkUsageExampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFrameworkUsageExampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7130E91E9248B700133C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +53,7 @@
 		0D7130FA1E9248B700133C94 /* MyFrameworkUsageExampleSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFrameworkUsageExampleSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7130FE1E9248B700133C94 /* MyFrameworkUsageExampleSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFrameworkUsageExampleSwiftTests.swift; sourceTree = "<group>"; };
 		0D7131001E9248B700133C94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D71310B1E9249F900133C94 /* MyFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D71310C1E9249F900133C94 /* MyFramework.framework in Frameworks */,
+				0D71310D1E924C6800133C94 /* MyFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +79,7 @@
 		0D7130DD1E9248B700133C94 = {
 			isa = PBXGroup;
 			children = (
+				0D71310B1E9249F900133C94 /* MyFramework.framework */,
 				0D7130E81E9248B700133C94 /* MyFrameworkUsageExampleSwift */,
 				0D7130FD1E9248B700133C94 /* MyFrameworkUsageExampleSwiftTests */,
 				0D7130E71E9248B700133C94 /* Products */,
@@ -106,6 +127,7 @@
 				0D7130E21E9248B700133C94 /* Sources */,
 				0D7130E31E9248B700133C94 /* Frameworks */,
 				0D7130E41E9248B700133C94 /* Resources */,
+				0D71310F1E924C6800133C94 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,6 +364,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 376QEB74QY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MyFrameworkUsageExampleSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.dadeb.MyFrameworkUsageExampleSwift;
@@ -355,6 +381,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 376QEB74QY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MyFrameworkUsageExampleSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.dadeb.MyFrameworkUsageExampleSwift;
