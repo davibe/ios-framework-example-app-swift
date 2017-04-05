@@ -24,10 +24,15 @@ class MyFrameworkUsageExampleSwiftTests: XCTestCase {
     }
     
     func testExample() {
+        
         let framework = self.vc.framework
         let result = framework.doSomething()
         XCTAssert(result)
         XCTAssert(framework.optionalString != nil)
+        
+        let resourceContent = framework.doReadResource()
+        XCTAssert(resourceContent != nil)
+        
     }
     
     func testPerformanceExample() {
